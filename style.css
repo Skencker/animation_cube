@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: black;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0004); /*attention non supporter par tout les nav*/
+  transform: rotate(-35deg);
+}
+
+.box {
+  position: relative;
+  left: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: tranSurface 1.5s ease-in-out infinite;
+}
+
+@keyframes tranSurface {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 78, 139, 1);
+  box-shadow: 0 0 5px rgba(255, 78, 139, 1), 
+    0 0 25px rgba(255, 78, 139, 1),
+    0 0 50px rgba(255, 78, 139, 1), 
+    0 0 100px rgba(255, 78, 139, 1),
+    0 0 200px rgba(255, 78, 139, 0.5),
+    0 0 300px rgba(255, 78, 139, 0.5);
+  transform-origin: bottom right;
+  animation: rotate 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(90deg);
+  }
+  65% {
+    transform: rotate(85deg);
+  }
+  70% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(87.5deg);
+  }
+  80%,
+  100% {
+    transform: rotate(90deg);
+  }
+}
